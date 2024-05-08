@@ -27,7 +27,7 @@ h1{
     text-underline-offset: 2px;
 }
 
-.wrap,.options,.board{
+.wrap,.options{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,19 +36,17 @@ h1{
 }
 
 .board{
-    border: solid 3px var(--accent);
-    height: 768px;
-    width: 768px;
-    gap: 0;
-    flex-direction: row;
+    display: flex;
     flex-wrap: wrap;
-    gap: 0px;
+    border: solid 3px var(--accent);
+    height: 600px;
+    width: 600px;
 }
 
 .options{
     border: solid 3px var(--secondary);
     height: 50px;
-    width: 800px;
+    width: 650px;
     padding: 20px;
     border-radius: 12px;
     margin-bottom: 20px;
@@ -70,11 +68,6 @@ h1{
 }
 
 .squares{
-    width: 16px;
-    height: 16px;
-    padding: 0;
-    border: none;
-    margin: 0;
-    background-color: var(--text);
+    border: 1px solid var(--text);
 }
 
