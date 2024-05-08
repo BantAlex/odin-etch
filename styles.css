@@ -40,6 +40,7 @@ h1{
     height: 300px;
     width: 300px;
     padding: 200px;
+    gap: 0;
 }
 
 .options{
@@ -62,5 +63,12 @@ h1{
     cursor: pointer;
     border: solid 3px var(--accent);
     color: var(--accent);
+}
+
+.squares{
+    display:flex;
+    width: 16px;
+    height: 16px;
+    margin: 0;
 }
 
