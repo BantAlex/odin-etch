@@ -1,1 +1,1 @@
-# odin-etch
+Etch-a-Sketch Project from Odin
