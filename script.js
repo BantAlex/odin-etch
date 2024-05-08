@@ -2,10 +2,11 @@
 let board = document.querySelector('.board');
 let options = document.querySelector('.options');
 let clearButton = document.querySelector('.clear-button');
+let capacity = 2303;
 
-let square = document.createElement('div');
-square.classList.add('squares');
-square.style.backgroundColor = 'green';
 
-board.appendChild(square);
-
+for (let i = 0; i <= capacity; i++){
+    let square = document.createElement('div');
+    square.classList.add('squares');
+    board.appendChild(square);
+}

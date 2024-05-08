@@ -4,6 +4,7 @@
     --primary:#ddb49a;
     --secondary:#84471f;
     --accent: #e38142;
+    --gradient: linear-gradient(90deg, rgba(221,180,154,1) 0%, rgba(132,71,31,1) 100%);
 }
 
 body{
@@ -32,15 +33,16 @@ h1{
     align-items: center;
     flex-direction: column;
     gap: 24px;
-    border-radius: 12px;;
 }
 
 .board{
     border: solid 3px var(--accent);
-    height: 300px;
-    width: 300px;
-    padding: 200px;
+    height: 768px;
+    width: 768px;
     gap: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0px;
 }
 
 .options{
@@ -48,6 +50,8 @@ h1{
     height: 50px;
     width: 800px;
     padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
 }
 
 .clear-button{
@@ -66,9 +70,11 @@ h1{
 }
 
 .squares{
-    display:flex;
     width: 16px;
     height: 16px;
+    padding: 0;
+    border: none;
     margin: 0;
+    background-color: var(--text);
 }
 
