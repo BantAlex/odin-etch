@@ -2,6 +2,8 @@
 const board = document.querySelector('.board');
 const clearButton = document.querySelector('.clear-button');
 const optionsWindow = document.querySelector('.options');
+const gridSlider = document.querySelector('.slider');
+console.log(gridSlider.value);
 //Board and square values
 let squaresPerSide = 16; // The dafult value for the 16x16 resolution
 let squareSize = 600 / squaresPerSide; // 600 => Board height/width
