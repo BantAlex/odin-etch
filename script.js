@@ -1,6 +1,7 @@
 //DOM selectors and variables
 const board = document.querySelector('.board');
 const clearButton = document.querySelector('.options-buttons');
+clearButton.addEventListener('click',() => {createGrid('var(--text)'); createGrid('red')});
 const optionsWindow = document.querySelector('.options');
 const gridSlider = document.querySelector('.slider');
 let sliderValue = gridSlider.value;
@@ -10,15 +11,12 @@ sliderValueDisplay.textContent = gridSlider.value + 'x' + gridSlider.value;
 gridSlider.addEventListener ('input', function() {
     sliderValueDisplay.textContent = gridSlider.value + 'x' + gridSlider.value;
 })
-
-clearButton.addEventListener('click',() =>{board.innerHTML=''});
-
 const confirmGrid = document.createElement('button');
 optionsWindow.appendChild(confirmGrid);
 confirmGrid.classList.add('options-buttons');
 confirmGrid.textContent = 'Confirm Size';
 
-function createGrid(){
+function createGrid(color){
     board.innerHTML = ''; //Damn, should've thought of that...
     let squareSize = 600 / sliderValue; // 600 => Board height/width
     for (let i = 0; i < sliderValue*sliderValue; i++){
@@ -28,13 +26,13 @@ function createGrid(){
         square.style.height= `${squareSize}px`;
         board.appendChild(square);
         square.addEventListener('mouseover',function(){
-            square.style.backgroundColor = 'red'; 
+            square.style.backgroundColor = color; 
         })
     }
 }
-createGrid();
+createGrid('red');
 confirmGrid.addEventListener('click',function(){
     sliderValue = gridSlider.value;
-    createGrid();
+    createGrid('red');
 })
 
