@@ -5,7 +5,7 @@ const optionsWindow = document.querySelector('.options');
 
 const gridSlider = document.querySelector('.slider');
 let sliderValue = gridSlider.value;
-sliderValue = 16; // The dafult value for the 16x16 resolution
+// The dafult value for the 16x16 resolution
 const sliderValueDisplay = document.createElement('h3');
 optionsWindow.appendChild(sliderValueDisplay)
 sliderValueDisplay.textContent = gridSlider.value + 'x' + gridSlider.value;
@@ -33,4 +33,4 @@ function createGrid(squareAmount){
     }
 }
 //Default Board
-createGrid(sliderValue);
+confirmGrid.addEventListener('click',createGrid(sliderValue))
