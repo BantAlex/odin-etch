@@ -39,24 +39,20 @@ h1{
     display: flex;
     flex-wrap: wrap;
     border: solid 3px var(--accent);
-    height: 600px;
-    width: 600px;
 }
 
 .options{
     border: solid 3px var(--secondary);
-    height: 50px;
-    width: 650px;
-    padding: 20px;
     border-radius: 12px;
     margin-bottom: 20px;
+    padding: 12px;
 }
 
 .clear-button{
     color: var(--text);
     border: solid 3px transparent;
     border-radius: 12px;
-    padding:  16px 32px 16px 32px;
+    padding:  8px 16px 8px 16px;
     background-color: var(--background);
     font-weight: 600;
 }
@@ -67,7 +63,7 @@ h1{
     color: var(--accent);
 }
 
-.squares{
-    border: 1px solid var(--text);
+.square{
+    height: 16px;
+    width: 16px;
 }
-
