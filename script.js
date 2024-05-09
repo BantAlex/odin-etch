@@ -2,10 +2,9 @@
 const board = document.querySelector('.board');
 const clearButton = document.querySelector('.options-buttons');
 const optionsWindow = document.querySelector('.options');
-
+let square = '';
 const gridSlider = document.querySelector('.slider');
 let sliderValue = gridSlider.value;
-// The dafult value for the 16x16 resolution
 const sliderValueDisplay = document.createElement('h3');
 optionsWindow.appendChild(sliderValueDisplay)
 sliderValueDisplay.textContent = gridSlider.value + 'x' + gridSlider.value;
@@ -18,19 +17,19 @@ optionsWindow.appendChild(confirmGrid);
 confirmGrid.classList.add('options-buttons')
 confirmGrid.textContent = 'Confirm Size'
 
-//Board and square values
-let squaresPerSide = sliderValue; 
-let squareSize = 600 / squaresPerSide; // 600 => Board height/width
-
-
-function createGrid(squareAmount){
-    for (let i = 0; i < squareAmount*squareAmount; i++){
-        const square = document.createElement('div');
+function createGrid(){
+    board.innerHTML = ''; //Damn, should've thought of that...
+    let squareSize = 600 / sliderValue; // 600 => Board height/width
+    for (let i = 0; i < sliderValue*sliderValue; i++){
+        square = document.createElement('div');
         square.style.backgroundColor = 'var(--text)';
         square.style.width = `${squareSize}px`;
         square.style.height= `${squareSize}px`;
         board.appendChild(square);
     }
 }
-//Default Board
-confirmGrid.addEventListener('click',createGrid(sliderValue))
+createGrid();
+confirmGrid.addEventListener('click',function(){
+    sliderValue = gridSlider.value;
+    createGrid();
+})
