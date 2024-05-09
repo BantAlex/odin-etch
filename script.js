@@ -8,9 +8,7 @@ let sliderValue = gridSlider.value;
 const sliderValueDisplay = document.createElement('h3');
 optionsWindow.appendChild(sliderValueDisplay)
 sliderValueDisplay.textContent = gridSlider.value + 'x' + gridSlider.value;
-gridSlider.addEventListener ('input', function() {
-    sliderValueDisplay.textContent = gridSlider.value + 'x' + gridSlider.value;
-})
+gridSlider.addEventListener ('input', () => {sliderValueDisplay.textContent = gridSlider.value + 'x' + gridSlider.value;});
 const confirmGrid = document.createElement('button');
 optionsWindow.appendChild(confirmGrid);
 confirmGrid.classList.add('options-buttons');
@@ -35,4 +33,3 @@ confirmGrid.addEventListener('click',function(){
     sliderValue = gridSlider.value;
     createGrid('var(--accent)');
 })
-
