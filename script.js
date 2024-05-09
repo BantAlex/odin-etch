@@ -1,7 +1,7 @@
 //DOM selectors and variables
 const board = document.querySelector('.board');
 const clearButton = document.querySelector('.options-buttons');
-clearButton.addEventListener('click',() => {createGrid('var(--text)'); createGrid('red')});
+clearButton.addEventListener('click',() => {createGrid('var(--text)'); createGrid('var(--accent)')});
 const optionsWindow = document.querySelector('.options');
 const gridSlider = document.querySelector('.slider');
 let sliderValue = gridSlider.value;
@@ -30,9 +30,9 @@ function createGrid(color){
         })
     }
 }
-createGrid('red');
+createGrid('var(--accent)');
 confirmGrid.addEventListener('click',function(){
     sliderValue = gridSlider.value;
-    createGrid('red');
+    createGrid('var(--accent)');
 })
 
